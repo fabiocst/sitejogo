@@ -14,9 +14,15 @@ closeMenu.addEventListener('click',()=>{
     menu.style.right=(menu.offsetWidth*-1)+'px'
     
     setTimeout(()=>{
-        menu.removeAtribute("style")
-        openMenu.removeAtribute('style')
+        menu.removeAttribute("style")
+        openMenu.removeAttribute('style')
         
     },200);
     
 })
+// menu.addEventListener('mouseover',()=>{
+//     menu.style.display="none"
+// })
+// menu.addEventListener('mouseout',()=>{
+//     menu.style.display="flex"
+// })
