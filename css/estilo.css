@@ -13,37 +13,41 @@ body {
     flex-wrap: wrap;
     flex: 1 1 100vw;
     margin: 3px;
+    background-color:rgb(138, 121, 160);
+    
+    
 }
 
 header,nav,aside,footer,main {
-    background: #a1a1a1;
+    background:rgb(97, 59, 148);
     display:flex;
     margin: 3px;
 }
-/*  */
+                                                /* Comandos do Cabeçalho e Navbar */
+
+
 header {
     flex: 1 1 100vw;
     background-color:rgb(97, 59, 148);
-    
-    
-    
 }
 
-header #logo{
+#logo{
     display: flex;
     flex: 0 1 200px;
     background: #e7b038;
     justify-content: center;
     align-items: center;
     font-family: 'fontelogo';
-    border-top-left-radius: 30%; 
-    border-bottom-left-radius: 30%;   
-    
-    
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
-header img{
-    border-left: 100px;
+#logo:hover{
+    text-decoration: none;
+    color: #fff;
 }
+
 #openMenu, #closeMenu{
     border: none;
     background:none;
@@ -52,6 +56,7 @@ header img{
     padding: 0px 5px 0px 5px;
     cursor: pointer;
     display:none;
+    color: #fff;
 }
 nav {
     justify-content: flex-end;
@@ -64,7 +69,7 @@ nav {
 nav a{
     position: relative;
     margin: 0 3%;
-    font-size: 15pt;
+    font-size: 15px;
     font-size: 18px;
     color: #fff;
     font-weight:500;
@@ -72,6 +77,15 @@ nav a{
     margin-left: 40px;
 
  }
+ nav a:hover{
+    /* opacity: 0.8; */
+    /* background-color: purple; */
+    /* border-radius: 45%; */
+    
+    text-decoration: none;
+    color: #fff;
+
+}
  nav a::before{
     content: '';
     position: absolute;
@@ -88,34 +102,89 @@ nav a{
     
 
  
+                        /* Comandos do Conteudo principal */
 
-
-main {
-    
-    flex: 10 1 500px;
-    justify-content: center;
+main{
+    width: 500PX;
+    flex: 13 1 800px;
+    justify-content:space-evenly;
     background-color:rgb(138, 121, 160);
-    display:flex;
+    /* height: calc(100vh); */
+    
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    align-items: center;
+    
     
     
 }
-.conteudo{
+.elementomain{
+    display: flex;
+    /* border-style: dotted; */
+    /* border-color: #e7b038; */
+    width: 500px;
+    height: 400px;
     font-size:20px;
+    flex-wrap: wrap;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
 }
-div{
-    width: 600px;
+.elementomain img{
+    /* width: 400px; */
+    max-height: 370px;
+}
+.elementomain p{
+    flex-shrink: 2;
+}
+#carrossel{
+    width: 800px;
+    height: 400px;
+    padding-right: 10px;
+    flex-grow: 3;
+}
+
+
+/* div{
+    width: 300px;
     align-content: center;
     display: flex;
     
-}
+} */
 
 aside {
-    
-    flex: 1 1 200px;
-    background-color:rgb(138, 121, 160);
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 200px;
+	/* dispoe dos  items em coluna, ao centro do conteiner */
+	flex-direction: column; 
+	justify-content: space-evenly;
+	align-items: center;
+    color: #fff;
+	
 }
-aside img{
-    margin-left: 20px ;
+.elementoaside{
+	min-width: 250px;
+	min-height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-style: ridge;
+	border-radius: 5px;
+	margin: 10px;
+    text-decoration: none;
+    
+    
+}
+.elementoaside a{
+    text-decoration: none;
+    color: #fff;
 }
 
 footer {
@@ -125,34 +194,34 @@ footer {
     background-color:rgb(97, 59, 148);
     align-items: center;
     justify-content: center;
-    position: sticky;
+    /* position: absolute; */
     bottom: 0;
+    color:#fff;
+    height: 150px;
 }
-#conteinerRodape{
-    flex: 0 3 50vw;
-    /* width: 300px; */
-    height: 100px;
-    background: #e7b038;
-    border-radius: 10px;
-    justify-content: center;
+
+.elementofooter{
+    display: flex;
+    background-color: #e7b038;
+    width: 500px;
+    height: 50px;
     align-items: center;
+    justify-content: center;
+    padding: 50px;
+    border: 50px;
+}
+.elementofooter p{
+    align-items: center;
+    justify-content: center;
 }
 a {
     text-decoration: none;
     color: inherit;
 }
-nav a:hover{
-    /* opacity: 0.8; */
-    /* background-color: purple; */
-    /* border-radius: 45%; */
-    
-    text-decoration: none;
-    color: #fff;
-
-}
 
 
-@media only screen and (max-width: 717px){
+
+@media only screen and (max-width: 800px){
     #openMenu, #closeMenu{
         display: block;
 
@@ -162,8 +231,8 @@ nav a:hover{
     }
     #closeMenu{
         position: fixed;
-        right:15px;
-        top: 15px;
+        right:12px;
+        top: 20px;
     }
     nav{
         position: fixed;
@@ -180,11 +249,51 @@ nav a:hover{
     }
     nav a{
         margin: 3%;
-        display: none;
+        display: flex;
         
     }
+    main{
+        display: flex;
+        flex-direction: column;
+        /* width:100vw; */
+    }
+    .elementomain{
+        width: 100vw;
+    }
+    #carrossel{
+        width: 100vw;
+    }
+    aside{
+        display:flex;
+        flex-direction: column;
+    
+    
+	}
+    
     
 }
+
+@media only screen and (max-width: 1310px) {
+	aside{
+        /* display:block; */
+        flex-direction: row;
+    
+    
+	}
+}
+
+@media only screen and (max-width: 550px) {
+    main{
+        flex-direction: column;
+        width: 100vw;
+    }
+    aside{
+        flex-direction: column;
+    }
+
+}
+
+
 /* código para permitir reconhecimento de fonte externa */
 @font-face {
     font-family: 'fontelogo';

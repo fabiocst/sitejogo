@@ -1,6 +1,6 @@
 openMenu.addEventListener('click', () => {
     menu.style.display="flex"
-    
+    carrossel.style.display="none"
     menu.style.right=(menu.offsetWidth * -1)+'px'
     setTimeout(()=> {
         menu.style.opacity= '1'
@@ -10,6 +10,7 @@ openMenu.addEventListener('click', () => {
 })
 
 closeMenu.addEventListener('click',()=>{
+    carrossel.style.display="flex"
     menu.style.opacity="0"
     menu.style.right=(menu.offsetWidth*-1)+'px'
     
